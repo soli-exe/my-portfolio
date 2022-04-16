@@ -18,8 +18,8 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "tailwindDev": "postcss ./src/assets/style/css/tailwind.css -o ./public/tailwind.css --watch",
-    "tailwindProd": "cross-env cssnano NODE_ENV=production postcss ./src/assets/style/css/tailwind.css -o ./public/tailwind_output.css"
+    "tailwindDev": "postcss ./src/assets/style/css/tailwind.css -o ./src/tailwind.css --watch",
+    "tailwindProd": "cross-env cssnano NODE_ENV=production postcss ./src/assets/style/css/tailwind.css -o ./src/tailwind.css"
   },
   "eslintConfig": {
     "extends": [
