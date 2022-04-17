@@ -1,18 +1,26 @@
-import React from 'react';
+import React, { useState } from 'react';
 import menuIcon from '../assets/icons/menu.svg';
 import logo from '../assets/icons/logo/My Logo.svg';
-
+import Navbar from './Navbar';
 
 const Header = () => {
+
+    const [navShown, setNavShown] = useState(false);
+
+    const toggleNav = () => {
+        return setNavShown(prevState => !prevState);
+    }
+
     return (
         <header className='px-5 py-2 bg-box-dark'>
             <div className='flex items-center justify-between'>
-                <span className='px-1'>
+                <span onClick={toggleNav} className='relative px-1 md:hidden'>
                     <img className='w-6' src={menuIcon} alt='menu icon' />
                 </span>
                 <span className='cursor-pointer'>
                     <img className='w-9' src={logo} alt='logo' />
                 </span>
+                <Navbar isShown={navShown} />
                 <span className='cursor-pointer px-1'>
                     <svg width="20" height="20" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M15 8.75C13.3424 8.75 11.7527 9.40848 10.5806 10.5806C9.40848 11.7527 8.75 13.3424 8.75 15C8.75 16.6576 9.40848 18.2473 10.5806 19.4194C11.7527 20.5915 13.3424 21.25 15 21.25C16.6576 21.25 18.2473 20.5915 19.4194 19.4194C20.5915 18.2473 21.25 16.6576 21.25 15C21.25 13.3424 20.5915 11.7527 19.4194 10.5806C18.2473 9.40848 16.6576 8.75 15 8.75Z" fill="white" />
