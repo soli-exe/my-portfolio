@@ -366,6 +366,9 @@ Ensure the default browser behavior of the `hidden` attribute.
 [hidden] {
   display: none;
 }
+    html {
+        font-family: url('/src/assets/style/font/LeagueSpartan.otf');
+    }
 
 *, ::before, ::after {
   --tw-translate-x: 0;
