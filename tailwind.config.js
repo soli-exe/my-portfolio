@@ -15,7 +15,8 @@ module.exports = {
             'box-light': '#F8F8F8',
             'purple-dark': '#9633BC',
             'purple-light': '#9D6FFF',
-            'shadow-dark': '#34343425'
+            'shadow-dark': '#34343425',
+            'border-default': '#d0d7de',
         }
     },
     plugins: [],
