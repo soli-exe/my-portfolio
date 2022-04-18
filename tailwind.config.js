@@ -1,7 +1,11 @@
 module.exports = {
     content: ["./src/**/*.{js,jsx,ts,tsx}"],
     theme: {
-        extend: {},
+        extend: {
+            dropShadow: {
+                'custom': '0 0 15px rgba(52, 52, 52, 0.25)',
+            }
+        },
         container: {
             center: true,
         },
