@@ -3,7 +3,7 @@ module.exports = {
     theme: {
         extend: {
             dropShadow: {
-                'custom': '0 0 15px rgba(52, 52, 52, 0.25)',
+                'custom': '0 0 15px rgba(52, 52, 52, 0.1)',
             }
         },
         container: {
