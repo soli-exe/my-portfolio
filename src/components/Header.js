@@ -12,7 +12,7 @@ const Header = () => {
     }
 
     return (
-        <header className='px-5 py-2 bg-box-dark mb-8'>
+        <header className='px-5 py-2 bg-box-dark max-w-7xl'>
             <div className='flex items-center justify-between'>
                 <span onClick={toggleNav} className='relative px-1 md:hidden'>
                     <img className='w-6' src={menuIcon} alt='menu icon' />
