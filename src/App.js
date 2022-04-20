@@ -4,7 +4,7 @@ import Header from './components/Header';
 
 const App = () => {
   return (
-    <div className="container h-screen bg-bg-light">
+    <div className="bg-bg-light md:px-16 lg:px-32">
       <Header />
     </div>
   );
