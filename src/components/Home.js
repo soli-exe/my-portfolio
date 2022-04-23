@@ -2,6 +2,7 @@ import React from 'react';
 import Intro from './Intro';
 import About from './About';
 import Contact from './Contact';
+import Footer from './Footer';
 import styled from 'styled-components';
 
 
@@ -19,6 +20,8 @@ const Home = () => {
             <About />
             <Divider></Divider>
             <Contact />
+            <Divider></Divider>
+            <Footer />
         </div>
     );
 };
