@@ -33,7 +33,7 @@ const Contact = () => {
             <section className='hidden md:block -ml-6 lg:w-1/2'>
                 <img className='max-w-sm md:w-64 lg:w-full' src={gmailImg} alt='gmail icon' />
             </section>
-            <div className='flex flex-col md:ml-6 w-full'>
+            <div className='flex flex-col w-full md:ml-6 lg:w-1/2'>
                 <header className='text-center mb-4 md:text-left' >
                     <h3 className='text-2xl font-extrabold text-purple-dark'>
                         Let's get in touch
