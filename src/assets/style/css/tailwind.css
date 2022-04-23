@@ -11,4 +11,20 @@ details summary{
     html {
         font-family: url('/src/assets/style/font/LeagueSpartan.otf');
     }
+    input::placeholder,
+    textarea::placeholder {
+        font-weight: 700;
+    }
+}
+
+.contact-input,
+.contact-textarea{
+    @apply w-full py-3 pl-6 rounded-full border border-bg-dark bg-bg-light focus:outline-purple-dark;
+}
+
+.contact-textarea{
+    resize: none;
+    overflow: auto;
+    height: 8rem;
+    border-radius: 2rem !important;
 }
