@@ -5,7 +5,7 @@ import Home from './components/Home';
 
 const App = () => {
   return (
-    <div className="grid place-content-center bg-bg-light sm:px-8 md:px-16 lg:px-32">
+    <div className="grid place-content-center bg-bg-light md:px-16 lg:px-32">
       <Header />
       <Home />
     </div>
