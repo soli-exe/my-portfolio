@@ -14,7 +14,7 @@ const Divider = styled.hr`
 
 const Home = () => {
     return (
-        <div className='max-w-7xl space-y-8 bg-bg-light'>
+        <div className='max-w-7xl space-y-8 bg-bg-light sm:px-8'>
             <Intro />
             <Divider></Divider>
             <About />
