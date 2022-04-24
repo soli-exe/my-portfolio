@@ -799,9 +799,22 @@ details summary{
     border-width: 0px;
   }
 
+  .md\:bg-transparent {
+    background-color: transparent;
+  }
+
   .md\:px-16 {
     padding-left: 4rem;
     padding-right: 4rem;
+  }
+
+  .md\:py-5 {
+    padding-top: 1.25rem;
+    padding-bottom: 1.25rem;
+  }
+
+  .md\:pt-5 {
+    padding-top: 1.25rem;
   }
 
   .md\:text-left {
@@ -811,6 +824,11 @@ details summary{
   .md\:text-lg {
     font-size: 1.125rem;
     line-height: 1.75rem;
+  }
+
+  .md\:text-base {
+    font-size: 1rem;
+    line-height: 1.5rem;
   }
 
   .md\:text-text-light {
