@@ -12,17 +12,13 @@ const Contact = () => {
     const formChangeHandler = (e) => {
         switch (e.target.id) {
             case 'email':
-                setEmailValue(e.target.value);
-                break;
+                return setEmailValue(e.target.value);
             case 'firstName':
-                setFirstNameValue(e.target.value);
-                break;
+                return setFirstNameValue(e.target.value);
             case 'lastName':
-                setLastNameValue(e.target.value);
-                break;
+                return setLastNameValue(e.target.value);
             case 'msg':
-                setMsgValue(e.target.value);
-                break;
+                return setMsgValue(e.target.value);
             default:
                 break;
         }
