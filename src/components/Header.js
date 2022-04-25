@@ -3,6 +3,7 @@ import menuIcon from '../assets/icons/menu.svg';
 import logo from '../assets/icons/logo/My Logo.svg';
 import Navbar from './Navbar';
 import styled from 'styled-components';
+import { Link } from 'react-router-dom';
 
 const SvgThemeIcon = styled.svg`
     fill: #F8F8F8;
@@ -28,9 +29,11 @@ const Header = () => {
                 <span onClick={toggleNav} className='relative px-1 md:hidden'>
                     <img className='w-6' src={menuIcon} alt='menu icon' />
                 </span>
-                <span className='cursor-pointer'>
-                    <img className='w-9' src={logo} alt='logo' />
-                </span>
+                <Link to='/'>
+                    <span className='cursor-pointer'>
+                        <img className='w-9' src={logo} alt='logo' />
+                    </span>
+                </Link>
                 <Navbar isShown={navShown} />
                 <span className='cursor-pointer px-1'>
                     <SvgThemeIcon width="20" height="20" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">

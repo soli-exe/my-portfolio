@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import { Link } from 'react-router-dom';
 
 const Nav = styled.nav`
     display: block;
@@ -33,7 +34,9 @@ const Navbar = (props) => {
         <Nav isShown={props.isShown} className='absolute top-11 left-6.5 md:static md:ml-auto z-10'>
             <Div>
                 <ul className='text-text-dark text-sm flex flex-col md:flex-row font-bold gap-x-4'>
-                    <li className='px-3 py-2 cursor-pointer border-b border-border-default md:border-0'>About</li>
+                    <Link to='/'>
+                        <li className='px-3 py-2 cursor-pointer border-b border-border-default md:border-0'>Home</li>
+                    </Link>
                     <li className='px-3 py-2 cursor-pointer border-b border-border-default md:border-0'>Skills</li>
                     <li className='px-3 py-2 cursor-pointer'>Projects</li>
                 </ul>
