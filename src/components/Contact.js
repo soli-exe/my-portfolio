@@ -35,13 +35,13 @@ const Contact = () => {
                         Let's get in touch
                     </h3>
                 </header>
-                <form onChange={formChangeHandler} className='flex flex-col space-y-4'>
-                    <input id='email' value={emailValue} type='email' className='contact-input' placeholder='Your email...' />
+                <form className='flex flex-col space-y-4'>
+                    <input onChange={formChangeHandler} id='email' value={emailValue} type='email' className='contact-input' placeholder='Your email...' />
                     <div className='flex space-x-2'>
-                        <input id='firstName' value={firstNameValue} type='text' className='contact-input flex-auto' placeholder='First name...' />
-                        <input id='lastName' value={lastNameValue} type='text' className='contact-input flex-auto' placeholder='Last name...' />
+                        <input onChange={formChangeHandler} id='firstName' value={firstNameValue} type='text' className='contact-input flex-auto' placeholder='First name...' />
+                        <input onChange={formChangeHandler} id='lastName' value={lastNameValue} type='text' className='contact-input flex-auto' placeholder='Last name...' />
                     </div>
-                    <textarea id='msg' value={msgValue} className='contact-textarea' placeholder='Drop me a message...'></textarea>
+                    <textarea onChange={formChangeHandler} id='msg' value={msgValue} className='contact-textarea' placeholder='Drop me a message...'></textarea>
                     <button className='w-full rounded-3xl py-3 bg-purple-dark font-semibold text-text-light'>
                         Send it
                     </button>
