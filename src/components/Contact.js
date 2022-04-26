@@ -1,28 +1,47 @@
-import React, { useState } from 'react';
+import React, { useReducer } from 'react';
 import gmailImg from '../assets/imgs/gmail.png';
+
+const initialState = {
+    'emailValue': '',
+    'firstnameValue': '',
+    'lastnameValue': '',
+    'msgValue': ''
+}
+
+const reducer = (state, action) => {
+    switch (action.type) {
+        case 'EMAIL': {
+            return {
+                ...state,
+                'emailValue': action.payload
+            };
+        }
+        case 'FIRSTNAME': {
+            return {
+                ...state,
+                'firstnameValue': action.payload
+            };
+        }
+        case 'LASTNAME': {
+            return {
+                ...state,
+                'lastnameValue': action.payload
+            };
+        }
+        case 'MSG': {
+            return {
+                ...state,
+                'msgValue': action.payload
+            };
+        }
+        default:
+            return state;
+    }
+}
 
 const Contact = () => {
 
-    const [emailValue, setEmailValue] = useState("");
-    const [firstNameValue, setFirstNameValue] = useState("");
-    const [lastNameValue, setLastNameValue] = useState("");
-    const [msgValue, setMsgValue] = useState("");
-
-
-    const formChangeHandler = (e) => {
-        switch (e.target.id) {
-            case 'email':
-                return setEmailValue(e.target.value);
-            case 'firstName':
-                return setFirstNameValue(e.target.value);
-            case 'lastName':
-                return setLastNameValue(e.target.value);
-            case 'msg':
-                return setMsgValue(e.target.value);
-            default:
-                break;
-        }
-    }
+    const [values, dispatch] = useReducer(reducer, initialState);
 
     return (
         <div className='flex p-6 items-center justify-between w-full h-max drop-shadow-custom bg-box-light md:rounded-lg'>
@@ -36,12 +55,12 @@ const Contact = () => {
                     </h3>
                 </header>
                 <form className='flex flex-col space-y-4'>
-                    <input onChange={formChangeHandler} id='email' value={emailValue} type='email' className='contact-input' placeholder='Your email...' />
+                    <input onChange={(e) => dispatch({ type: 'EMAIL', payload: e.target.value })} id='email' value={values.emailValue} type='email' className='contact-input' placeholder='Your email...' />
                     <div className='flex space-x-2'>
-                        <input onChange={formChangeHandler} id='firstName' value={firstNameValue} type='text' className='contact-input flex-auto' placeholder='First name...' />
-                        <input onChange={formChangeHandler} id='lastName' value={lastNameValue} type='text' className='contact-input flex-auto' placeholder='Last name...' />
+                        <input onChange={(e) => dispatch({ type: 'FIRSTNAME', payload: e.target.value })} id='firstName' value={values.firstnameValue} type='text' className='contact-input flex-auto' placeholder='First name...' />
+                        <input onChange={(e) => dispatch({ type: 'LASTNAME', payload: e.target.value })} id='lastName' value={values.lastnameValue} type='text' className='contact-input flex-auto' placeholder='Last name...' />
                     </div>
-                    <textarea onChange={formChangeHandler} id='msg' value={msgValue} className='contact-textarea' placeholder='Drop me a message...'></textarea>
+                    <textarea onChange={(e) => dispatch({ type: 'MSG', payload: e.target.value })} id='msg' value={values.msgValue} className='contact-textarea' placeholder='Drop me a message...'></textarea>
                     <button className='w-full rounded-3xl py-3 bg-purple-dark font-semibold text-text-light'>
                         Send it
                     </button>
