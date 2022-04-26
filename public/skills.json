@@ -3,37 +3,37 @@
         {
             "id": 1,
             "name": ["HTML", "CSS"],
-            "icons": ["src/assets/icons/tech/html.svg","src/assets/icons/tech/css.svg"],
+            "icons": ["./techLogos/html.svg","./techLogos/css.svg"],
             "description": "In order to implement the initial layout and structure,considering responsive design"
         },
         {
             "id": 2,
             "name": ["SaaS"],
-            "icons": ["src/assets/icons/tech/scss.svg"],
+            "icons": ["./techLogos/scss.svg"],
             "description": "CSS Preproccessor"
         },
         {
             "id": 3,
             "name": ["tailwind"],
-            "icons": ["src/assets/icons/tech/tailwind.svg"],
+            "icons": ["./techLogos/tailwind.svg"],
             "description": "Using this framework to imporove app performance and faster coding process"
         },
         {
             "id": 4,
             "name": ["js", "react"],
-            "icons": ["src/assets/icons/tech/js.svg","src/assets/icons/tech/react.svg"],
+            "icons": ["./techLogos/js.svg","./techLogos/react.svg"],
             "description": "Build and develop reusable, managable & maintainable functional components. Also develop optimized web app."
         },
         {
             "id": 5,
             "name": ["github", "git"],
-            "icons": ["src/assets/icons/tech/github-icon.svg","src/assets/icons/tech/git-icon.svg"],
+            "icons": ["./techLogos/git-icon.svg","./techLogos/github-icon.svg"],
             "description": "Using git in order to manage and review the project and maintain the source code."
         },
         {
             "id": 6,
             "name": ["API"],
-            "icons": ["src/assets/icons/tech/api-icon.svg"],
+            "icons": ["./techLogos/api-icon.svg"],
             "description": "Call the api to send request to server recieve and analysis data in response & able to handle or reject errors with best efficient way in order to display data on client side."
         }
     ]
