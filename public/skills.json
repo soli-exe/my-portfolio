@@ -10,7 +10,7 @@
             "id": 2,
             "name": ["SaaS"],
             "icons": ["src/assets/icons/tech/scss.svg"],
-            "description": ""
+            "description": "CSS Preproccessor"
         },
         {
             "id": 3,
