@@ -4,6 +4,7 @@ import '../src/tailwind.css';
 import Header from './components/Header';
 import Home from './components/Home';
 import Skills from './components/Skills';
+import Projects from './components/Projects';
 
 const App = () => {
   return (
@@ -12,6 +13,7 @@ const App = () => {
       <Routes>
         <Route path='/' element={<Home />} />
         <Route path='/skills' element={<Skills />} />
+        <Route path='/projects' element={<Projects />} />
       </Routes>
     </div>
   );
