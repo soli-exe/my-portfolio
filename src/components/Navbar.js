@@ -40,7 +40,9 @@ const Navbar = (props) => {
                     <Link to='/skills' >
                         <li className='px-3 py-2 cursor-pointer border-b border-border-default md:border-0'>Skills</li>
                     </Link>
-                    <li className='px-3 py-2 cursor-pointer'>Projects</li>
+                    <Link to='/projects'>
+                        <li className='px-3 py-2 cursor-pointer'>Projects</li>
+                    </Link>
                 </ul>
             </Div>
         </Nav>
