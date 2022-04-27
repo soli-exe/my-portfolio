@@ -3,6 +3,7 @@ import { Route, Routes } from 'react-router-dom';
 import '../src/tailwind.css';
 import Header from './components/Header';
 import Home from './components/Home';
+import Skills from './components/Skills';
 
 const App = () => {
   return (
@@ -10,6 +11,7 @@ const App = () => {
       <Header />
       <Routes>
         <Route path='/' element={<Home />} />
+        <Route path='/skills' element={<Skills />} />
       </Routes>
     </div>
   );
