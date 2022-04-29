@@ -36,5 +36,16 @@
             "icons": ["./techLogos/api-icon.svg"],
             "description": "Call the api to send request to server recieve and analysis data in response & able to handle or reject errors with best efficient way in order to display data on client side."
         }
+    ],
+    "projects": [
+        {
+            "id": 1,
+            "title": "Github issues clone",
+            "description": "This project is a simple clone of github issues page (facebook/react). The issues and detailas on this clone are real and has been fetched via axios from Github API/v3.",
+            "labels": ["react", "API", "styled components", "vercel"],
+            "icon": "./techLogos/react.svg",
+            "link": "https://github-issues-clone.vercel.app",
+            "githubRepo": "https://github.com/soli-exe/github-issues-clone"
+        }
     ]
 }
