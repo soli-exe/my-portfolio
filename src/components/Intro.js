@@ -45,7 +45,7 @@ const Intro = () => {
                 <button className='flex items-center text-text-light rounded-3xl py-2 px-5 text-sm bg-purple-dark'>
                     <img src={phoneIcon} alt='phone icon' className='w-5 mr-2' /> Get in touch
                 </button>
-                <a className='text-text-dark font-medium cursor-pointer rounded-3xl border-2 border-purple-dark py-2 px-5 text-sm'>
+                <a href='Resume.pdf' download={true} className='text-text-dark font-medium cursor-pointer rounded-3xl border-2 border-purple-dark py-2 px-5 text-sm'>
                     Download CV
                 </a>
             </footer>
