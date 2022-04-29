@@ -12,7 +12,7 @@ const Card = styled.div`
 const Div = styled.div`
     display: flex;
     align-items: center;
-    gap: 6px;
+    gap: 8px;
 `;
 
 const Span = styled.span`
@@ -38,10 +38,10 @@ const ProjectCard = (props) => {
                 </Div>
                 <Div>
                     <a href={link} target='_blank'>
-                        <img src={externalLinkIcon} className='w-4 cursor-pointer' />
+                        <img src={externalLinkIcon} className='w-5 cursor-pointer' />
                     </a>
                     <a href={githubRepoLink} target='_blank'>
-                        <img src={githubIcon} className='w-4 cursor-pointer' />
+                        <img src={githubIcon} className='w-5 cursor-pointer' />
                     </a>
                 </Div>
             </header>
