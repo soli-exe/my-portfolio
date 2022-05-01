@@ -1,11 +1,22 @@
-import React, { useReducer } from 'react';
+import React, { useReducer, useRef } from 'react';
 import gmailImg from '../assets/imgs/gmail.png';
+import exclamationIcon from '../assets/icons/exclamation.svg';
+import { sendForm } from 'emailjs-com';
+
+const apiKey = {
+    SERVICE_ID: 'service_et3htf6',
+    PUBLIC_KEY: 'rmd4-r0x3uieCDsnd',
+    TEMPLATE_ID: 'template_09f2ate'
+}
 
 const initialState = {
     'emailValue': '',
     'firstnameValue': '',
     'lastnameValue': '',
-    'msgValue': ''
+    'msgValue': '',
+    'hasError': false,
+    'errorMsg': 'An error has occured while sending Email, Please try again later!',
+    'sendBtnStatus': 'Send it'
 }
 
 const reducer = (state, action) => {
@@ -34,6 +45,22 @@ const reducer = (state, action) => {
                 'msgValue': action.payload
             };
         }
+        case "SENDING": {
+            return {
+                ...state,
+                'sendBtnStatus': action.payload
+            }
+        }
+        case "SUCCESS": {
+            return initialState
+        }
+        case 'FAILED': {
+            return {
+                ...state,
+                'hasError': action.payload,
+                'sendBtnStatus': 'Send it'
+            }
+        }
         default:
             return state;
     }
@@ -42,6 +69,23 @@ const reducer = (state, action) => {
 const Contact = () => {
 
     const [values, dispatch] = useReducer(reducer, initialState);
+
+    const form = useRef();
+
+
+    const sendEmail = (event) => {
+        event.preventDefault();
+        dispatch({ type: 'SENDING', payload: 'Sending...' })
+
+        sendForm(apiKey.SERVICE_ID, apiKey.TEMPLATE_ID, form.current, apiKey.PUBLIC_KEY)
+            .then(res => {
+                void res
+                dispatch({ type: 'SUCCESS' })
+            }, (error) => {
+                void error
+                return dispatch({ type: 'FAILED', payload: true })
+            });
+    }
 
     return (
         <div className='flex p-6 items-center justify-between w-full h-max drop-shadow-custom bg-box-light md:rounded-lg'>
@@ -54,15 +98,23 @@ const Contact = () => {
                         Let's get in touch
                     </h3>
                 </header>
-                <form className='flex flex-col space-y-4'>
-                    <input onChange={(e) => dispatch({ type: 'EMAIL', payload: e.target.value })} id='email' value={values.emailValue} type='email' className='contact-input' placeholder='Your email...' />
+                <form ref={form} onSubmit={sendEmail} className='flex flex-col space-y-4'>
+                    <input onChange={(e) => dispatch({ type: 'EMAIL', payload: e.target.value })} id='email' value={values.emailValue} name='user_email' type='email' className='contact-input' placeholder='Your email...' required />
                     <div className='flex space-x-2'>
-                        <input onChange={(e) => dispatch({ type: 'FIRSTNAME', payload: e.target.value })} id='firstName' value={values.firstnameValue} type='text' className='contact-input flex-auto' placeholder='First name...' />
-                        <input onChange={(e) => dispatch({ type: 'LASTNAME', payload: e.target.value })} id='lastName' value={values.lastnameValue} type='text' className='contact-input flex-auto' placeholder='Last name...' />
+                        <input onChange={(e) => dispatch({ type: 'FIRSTNAME', payload: e.target.value })} id='firstName' value={values.firstnameValue} name='first_name' type='text' className='contact-input flex-auto' placeholder='First name...' required />
+                        <input onChange={(e) => dispatch({ type: 'LASTNAME', payload: e.target.value })} id='lastName' value={values.lastnameValue} name='last_name' type='text' className='contact-input flex-auto' placeholder='Last name...' required />
                     </div>
-                    <textarea onChange={(e) => dispatch({ type: 'MSG', payload: e.target.value })} id='msg' value={values.msgValue} className='contact-textarea' placeholder='Drop me a message...'></textarea>
-                    <button className='w-full rounded-3xl py-3 bg-purple-dark font-semibold text-text-light'>
-                        Send it
+                    <textarea onChange={(e) => dispatch({ type: 'MSG', payload: e.target.value })} id='msg' value={values.msgValue} name='message' className='contact-textarea' placeholder='Drop me a message...' required></textarea>
+                    {values.hasError &&
+                        <span className='flex items-center justify-center gap-2 px-3'>
+                            <img src={exclamationIcon} alt='exclamation icon' />
+                            <p className='text-justify text-sm text-text-dark font-black'>
+                                {values.errorMsg}
+                            </p>
+                        </span>
+                    }
+                    <button type='submit' className='w-full rounded-3xl py-3 bg-purple-dark font-semibold text-text-light'>
+                        {values.sendBtnStatus}
                     </button>
                 </form>
             </div>
