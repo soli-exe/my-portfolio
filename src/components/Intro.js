@@ -1,7 +1,6 @@
 import React from 'react';
 import myImage from '../assets/imgs/me.png';
 import styled from 'styled-components';
-import phoneIcon from '../assets/icons/phone.svg';
 
 const PictureFrame = styled.picture`
     position: relative; 
@@ -42,9 +41,6 @@ const Intro = () => {
                 </section>
             </div>
             <footer className='flex justify-between w-full md:w-1/2 mt-6'>
-                <button className='flex items-center text-text-light rounded-3xl py-2 px-5 text-sm bg-purple-dark'>
-                    <img src={phoneIcon} alt='phone icon' className='w-5 mr-2' /> Get in touch
-                </button>
                 <a href='Resume.pdf' download={true} className='text-text-dark font-medium cursor-pointer rounded-3xl border-2 border-purple-dark py-2 px-5 text-sm'>
                     Download CV
                 </a>
