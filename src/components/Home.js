@@ -8,19 +8,20 @@ import styled from 'styled-components';
 
 const Divider = styled.hr`
     border: none;
-    border-bottom: 1px dashed #9633BC;
+    border-bottom: 1px dashed;
+    border-color: #9633BC;
     margin: 0 20%;
 `;
 
 const Home = () => {
     return (
-        <div className='max-w-7xl space-y-8 bg-bg-light sm:px-8'>
+        <div className='max-w-7xl space-y-8 bg-bg-light sm:px-8 bg-dark-theme'>
             <Intro />
-            <Divider></Divider>
+            <Divider className='border-purple-dark-mode'></Divider>
             <About />
-            <Divider></Divider>
+            <Divider className='border-purple-dark-mode'></Divider>
             <Contact />
-            <Divider></Divider>
+            <Divider className='border-purple-dark-mode'></Divider>
             <Footer />
         </div>
     );
