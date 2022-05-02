@@ -10,12 +10,12 @@ const Footer = () => {
             <div className='flex flex-wrap flex-col items-center md:flex-row-reverse md:justify-center md:gap-x-8'>
                 <ul className='mb-2 md:mb-0 flex gap-x-3'>
                     <li>
-                        <a href='https://github.com/soli-exe' target='_blank'>
+                        <a href='https://github.com/soli-exe' target='_blank' rel='noreferrer'>
                             <FontAwesomeIcon icon={faGithub} fixedWidth className='text-3xl w-5 cursor-pointer text-text-dark text-dark-theme' />
                         </a>
                     </li>
                     <li>
-                        <a href='https://www.instagram.com/its.soheil.dev/' target='_blank'>
+                        <a href='https://www.instagram.com/its.soheil.dev/' target='_blank' rel='noreferrer'>
                             <FontAwesomeIcon icon={faInstagram} fixedWidth className='text-3xl w-5 cursor-pointer text-text-dark text-dark-theme' />
                         </a>
                     </li>
