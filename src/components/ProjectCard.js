@@ -32,7 +32,7 @@ const ProjectCard = (props) => {
         <Card className='px-5 py-6 bg-box-light drop-shadow-lg sm:rounded-lg box-dark-mode'>
             <header className='flex justify-between items-center w-full'>
                 <Div>
-                    <img src={icon} className='w-10' />
+                    <img src={icon} className='w-10' alt='personal' />
                     <h1 className='font-extrabold text-purple-dark text-sm sm:text-lg text-purple-dark-mode'>
                         {title}
                     </h1>
