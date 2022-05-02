@@ -38,10 +38,10 @@ const ProjectCard = (props) => {
                     </h1>
                 </Div>
                 <Div>
-                    <a href={link} target='_blank'>
+                    <a href={link} target='_blank' rel='noreferrer'>
                         <FontAwesomeIcon icon={faArrowUpRightFromSquare} className='text-lg w-5 cursor-pointer text-text-dark text-dark-theme' />
                     </a>
-                    <a href={githubRepoLink} target='_blank'>
+                    <a href={githubRepoLink} target='_blank' rel='noreferrer'>
                         <FontAwesomeIcon icon={faGithub} className='text-lg w-5 cursor-pointer text-text-dark text-dark-theme' />
                     </a>
                 </Div>
