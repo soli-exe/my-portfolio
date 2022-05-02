@@ -12,14 +12,14 @@ const aboutBody = [
 const About = () => {
 
     return (
-        <div className='flex flex-col p-6 w-full h-max drop-shadow-custom bg-box-light md:rounded-lg'>
+        <div className='flex flex-col p-6 w-full h-max drop-shadow-custom bg-box-light md:rounded-lg box-dark-mode'>
             <header className='text-center mb-4 md:text-left' >
-                <h3 className='text-2xl font-extrabold text-purple-dark'>
+                <h3 className='text-2xl font-extrabold text-purple-dark text-purple-dark-mode'>
                     About me
                 </h3>
             </header>
             <article className='space-y-3 text-justify font-semibold'>
-                {aboutBody.map(text => <p key={v4()} className="text-md">{text}</p>)}
+                {aboutBody.map(text => <p key={v4()} className="text-md text-text-dark text-dark-theme">{text}</p>)}
             </article>
         </div >
     );

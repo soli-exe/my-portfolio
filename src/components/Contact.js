@@ -88,13 +88,13 @@ const Contact = () => {
     }
 
     return (
-        <div className='flex p-6 items-center justify-between w-full h-max drop-shadow-custom bg-box-light md:rounded-lg'>
+        <div className='flex p-6 items-center justify-between w-full h-max drop-shadow-custom bg-box-light md:rounded-lg box-dark-mode'>
             <section className='hidden md:block -ml-6 lg:w-1/2'>
                 <img className='max-w-sm md:w-64 lg:w-full' src={gmailImg} alt='gmail icon' />
             </section>
             <div className='flex flex-col w-full md:ml-6 lg:w-1/2'>
                 <header className='text-center mb-4 md:text-left' >
-                    <h3 className='text-2xl font-extrabold text-purple-dark'>
+                    <h3 className='text-2xl font-extrabold text-purple-dark text-purple-dark-mode'>
                         Let's get in touch
                     </h3>
                 </header>
@@ -108,12 +108,12 @@ const Contact = () => {
                     {values.hasError &&
                         <span className='flex items-center justify-center gap-2 px-3'>
                             <img src={exclamationIcon} alt='exclamation icon' />
-                            <p className='text-justify text-sm text-text-dark font-black'>
+                            <p className='text-justify text-sm text-text-dark font-black text-dark-theme'>
                                 {values.errorMsg}
                             </p>
                         </span>
                     }
-                    <button type='submit' className='w-full rounded-3xl py-3 bg-purple-dark font-semibold text-text-light'>
+                    <button type='submit' className='w-full rounded-3xl py-3 bg-purple-dark font-semibold text-text-light bg-purple-dark-mode'>
                         {values.sendBtnStatus}
                     </button>
                 </form>

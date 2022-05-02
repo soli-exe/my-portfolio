@@ -26,11 +26,11 @@ const Intro = () => {
                         <img src={myImage} className='w-64' />
                     </PictureFrame>
                 </section>
-                <section className='text-text-dark w-full md:w-1/2 space-y-4 text-justify'>
+                <section className='text-text-dark w-full md:w-1/2 space-y-4 text-justify text-dark-theme'>
                     <p className='font-semibold text-lg'>
                         Hi there,
                     </p>
-                    <p className='text-purple-dark text-2xl font-extrabold'>
+                    <p className='text-purple-dark text-2xl font-extrabold text-purple-dark-mode'>
                         This is Soheil known as SoliExE.
                         I do implement Responsive, Scalable & Fast things for the web.
                     </p>
@@ -41,7 +41,7 @@ const Intro = () => {
                 </section>
             </div>
             <footer className='flex justify-between w-full md:w-1/2 mt-6'>
-                <a href='Resume.pdf' download={true} className='text-text-dark font-medium cursor-pointer rounded-3xl border-2 border-purple-dark py-2 px-5 text-sm'>
+                <a href='Resume.pdf' download={true} className='text-text-dark font-medium cursor-pointer rounded-3xl border-2 border-purple-dark py-2 px-5 text-sm border-purple-dark-mode text-dark-theme'>
                     Download CV
                 </a>
             </footer>

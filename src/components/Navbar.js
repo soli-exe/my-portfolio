@@ -33,7 +33,7 @@ const Navbar = (props) => {
     return (
         <Nav isShown={props.isShown} className='absolute top-11 left-6.5 md:static md:ml-auto md:mr-4 z-10'>
             <Div>
-                <ul className='text-text-dark text-sm flex flex-col md:flex-row font-bold gap-x-4'>
+                <ul className='text-text-dark text-sm flex flex-col md:flex-row font-bold gap-x-4 md:dark:text-text-light'>
                     <Link to='/'>
                         <li className='px-3 py-2 cursor-pointer border-b border-border-default md:border-0'>Home</li>
                     </Link>

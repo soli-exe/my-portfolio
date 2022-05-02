@@ -31,7 +31,7 @@ const Projects = () => {
     return (
         <div className='max-w-7xl w-full mt-4 sm:px-4'>
             <header className='text-center md:text-left sm:px-4'>
-                <h3 className='text-2xl font-black text-purple-dark'>
+                <h3 className='text-2xl font-black text-purple-dark text-purple-dark-mode'>
                     Showcases
                 </h3>
             </header>

@@ -28,11 +28,11 @@ const Span = styled.span`
 const ProjectCard = (props) => {
     const { title, description, labels, icon, link, githubRepoLink } = props;
     return (
-        <Card className='px-5 py-6 bg-bg-light drop-shadow-lg sm:rounded-lg'>
+        <Card className='px-5 py-6 bg-box-light drop-shadow-lg sm:rounded-lg box-dark-mode'>
             <header className='flex justify-between items-center w-full'>
                 <Div>
                     <img src={icon} className='w-10' />
-                    <h1 className='font-extrabold text-purple-dark text-sm sm:text-lg'>
+                    <h1 className='font-extrabold text-purple-dark text-sm sm:text-lg text-purple-dark-mode'>
                         {title}
                     </h1>
                 </Div>
@@ -46,13 +46,13 @@ const ProjectCard = (props) => {
                 </Div>
             </header>
             <section className='mt-5 mb-8'>
-                <p className='text-justify sm:text-left font-medium text-text-dark'>
+                <p className='text-justify sm:text-left font-medium text-text-dark text-dark-theme'>
                     {description}
                 </p>
             </section>
             <footer className='flex w-full gap-2 flex-wrap'>
                 {labels.map(lbl => {
-                    return <Span className='bg-purple-light text-text-dark align-middle' key={v4()}>{lbl}</Span>
+                    return <Span className='bg-purple-light text-text-dark align-middle text-dark-theme' key={v4()}>{lbl}</Span>
                 })}
             </footer>
         </Card>

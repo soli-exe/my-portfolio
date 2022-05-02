@@ -24,7 +24,7 @@ const Footer = () => {
                         </a>
                     </li>
                 </ul>
-                <p className='text-center font-extrabold text-md text-text-dark'>
+                <p className='text-center font-extrabold text-md text-text-dark text-dark-theme'>
                     Designed & developed by SoliExE @2022
                 </p>
             </div>
