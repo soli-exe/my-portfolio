@@ -1,8 +1,9 @@
 import React from 'react';
 import styled from 'styled-components';
 import { v4 } from 'uuid';
-import externalLinkIcon from '../assets/icons/external-link.svg';
-import githubIcon from '../assets/icons/github.svg'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faGithub } from '@fortawesome/free-brands-svg-icons';
+import { faArrowUpRightFromSquare } from '@fortawesome/free-solid-svg-icons';
 
 const Card = styled.div`
     width:  max(100%, 18rem);
@@ -38,10 +39,10 @@ const ProjectCard = (props) => {
                 </Div>
                 <Div>
                     <a href={link} target='_blank'>
-                        <img src={externalLinkIcon} className='w-5 cursor-pointer' />
+                        <FontAwesomeIcon icon={faArrowUpRightFromSquare} className='text-lg w-5 cursor-pointer text-text-dark text-dark-theme' />
                     </a>
                     <a href={githubRepoLink} target='_blank'>
-                        <img src={githubIcon} className='w-5 cursor-pointer' />
+                        <FontAwesomeIcon icon={faGithub} className='text-lg w-5 cursor-pointer text-text-dark text-dark-theme' />
                     </a>
                 </Div>
             </header>

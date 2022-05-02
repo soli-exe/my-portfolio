@@ -1,5 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faGithub } from '@fortawesome/free-brands-svg-icons';
+import { faInstagram } from '@fortawesome/free-brands-svg-icons';
 import githubIcon from '../assets/icons/github.svg';
 import instagramIcon from '../assets/icons/instagram.svg';
 
@@ -12,15 +15,15 @@ const Footer = () => {
     return (
         <footer className='block w-full pb-4'>
             <div className='flex flex-wrap flex-col items-center md:flex-row-reverse md:justify-center md:gap-x-8'>
-                <ul className='mb-2 flex gap-x-3'>
+                <ul className='mb-2 md:mb-0 flex gap-x-3'>
                     <li>
                         <a href='https://github.com/soli-exe' target='_blank'>
-                            <Img src={githubIcon} alt='github icon' />
+                            <FontAwesomeIcon icon={faGithub} fixedWidth className='text-3xl w-5 cursor-pointer text-text-dark text-dark-theme' />
                         </a>
                     </li>
                     <li>
                         <a href='https://www.instagram.com/its.soheil.dev/' target='_blank'>
-                            <Img src={instagramIcon} alt='github icon' />
+                            <FontAwesomeIcon icon={faInstagram} fixedWidth className='text-3xl w-5 cursor-pointer text-text-dark text-dark-theme' />
                         </a>
                     </li>
                 </ul>
