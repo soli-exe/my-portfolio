@@ -445,9 +445,6 @@ Ensure the default browser behavior of the `hidden` attribute.
 .mt-6 {
   margin-top: 1.5rem;
 }
-.mr-2 {
-  margin-right: 0.5rem;
-}
 .mt-5 {
   margin-top: 1.25rem;
 }
@@ -487,11 +484,11 @@ Ensure the default browser behavior of the `hidden` attribute.
 .w-64 {
   width: 16rem;
 }
-.w-5 {
-  width: 1.25rem;
-}
 .w-10 {
   width: 2.5rem;
+}
+.w-5 {
+  width: 1.25rem;
 }
 .max-w-sm {
   max-width: 24rem;
@@ -528,9 +525,6 @@ Ensure the default browser behavior of the `hidden` attribute.
 }
 .gap-12 {
   gap: 3rem;
-}
-.gap-4 {
-  gap: 1rem;
 }
 .gap-x-3 {
   column-gap: 0.75rem;
@@ -606,12 +600,12 @@ Ensure the default browser behavior of the `hidden` attribute.
   --tw-bg-opacity: 1;
   background-color: rgb(157 111 255 / var(--tw-bg-opacity));
 }
-.bg-bg-dark {
-  --tw-bg-opacity: 1;
-  background-color: rgb(14 20 28 / var(--tw-bg-opacity));
-}
 .p-6 {
   padding: 1.5rem;
+}
+.px-3 {
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
 }
 .py-3 {
   padding-top: 0.75rem;
@@ -628,10 +622,6 @@ Ensure the default browser behavior of the `hidden` attribute.
 .px-1 {
   padding-left: 0.25rem;
   padding-right: 0.25rem;
-}
-.px-3 {
-  padding-left: 0.75rem;
-  padding-right: 0.75rem;
 }
 .py-6 {
   padding-top: 1.5rem;
@@ -653,13 +643,13 @@ Ensure the default browser behavior of the `hidden` attribute.
   font-size: 1.5rem;
   line-height: 2rem;
 }
-.text-lg {
-  font-size: 1.125rem;
-  line-height: 1.75rem;
-}
 .text-sm {
   font-size: 0.875rem;
   line-height: 1.25rem;
+}
+.text-lg {
+  font-size: 1.125rem;
+  line-height: 1.75rem;
 }
 .font-extrabold {
   font-weight: 800;
@@ -667,26 +657,26 @@ Ensure the default browser behavior of the `hidden` attribute.
 .font-semibold {
   font-weight: 600;
 }
+.font-black {
+  font-weight: 900;
+}
 .font-medium {
   font-weight: 500;
 }
 .font-bold {
   font-weight: 700;
 }
-.font-black {
-  font-weight: 900;
-}
 .text-purple-dark {
   --tw-text-opacity: 1;
   color: rgb(150 51 188 / var(--tw-text-opacity));
 }
-.text-text-light {
-  --tw-text-opacity: 1;
-  color: rgb(255 255 255 / var(--tw-text-opacity));
-}
 .text-text-dark {
   --tw-text-opacity: 1;
   color: rgb(39 40 45 / var(--tw-text-opacity));
+}
+.text-text-light {
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
 }
 .drop-shadow-custom {
   --tw-drop-shadow: drop-shadow(0 0 15px rgba(52, 52, 52, 0.1));
@@ -695,6 +685,19 @@ Ensure the default browser behavior of the `hidden` attribute.
 .drop-shadow-lg {
   --tw-drop-shadow: drop-shadow(0 10px 8px rgb(0 0 0 / 0.04)) drop-shadow(0 4px 3px rgb(0 0 0 / 0.1));
   filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
+}
+.transition {
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-backdrop-filter;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-backdrop-filter;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
+.duration-500 {
+  transition-duration: 500ms;
+}
+.ease-in-out {
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 details summary{
@@ -719,11 +722,96 @@ details summary{
   outline-color: #9633BC;
 }
 
+.dark .contact-input, .dark .contact-textarea {
+  border-width: 2px;
+  --tw-border-opacity: 1;
+  border-color: rgb(248 248 248 / var(--tw-border-opacity));
+  --tw-bg-opacity: 1;
+  background-color: rgb(32 44 60 / var(--tw-bg-opacity));
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
+.dark .contact-input:focus, .dark .contact-textarea:focus {
+  outline-color: #9D6FFF;
+}
+
 .contact-textarea{
     resize: none;
     overflow: auto;
     height: 8rem;
     border-radius: 2rem !important;
+}
+
+.bg-dark-theme {
+  transition-property: all;
+  transition-duration: 500ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.dark .bg-dark-theme {
+  --tw-bg-opacity: 1;
+  background-color: rgb(14 20 28 / var(--tw-bg-opacity));
+}
+
+.text-dark-theme {
+  transition-property: all;
+  transition-duration: 500ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.dark .text-dark-theme {
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
+.box-dark-mode {
+  transition-property: all;
+  transition-duration: 500ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.dark .box-dark-mode {
+  --tw-bg-opacity: 1;
+  background-color: rgb(32 44 60 / var(--tw-bg-opacity));
+}
+
+.text-purple-dark-mode {
+  transition-property: all;
+  transition-duration: 500ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.dark .text-purple-dark-mode {
+  --tw-text-opacity: 1;
+  color: rgb(157 111 255 / var(--tw-text-opacity));
+}
+
+.border-purple-dark-mode {
+  transition-property: all;
+  transition-duration: 500ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.dark .border-purple-dark-mode {
+  --tw-border-opacity: 1;
+  border-color: rgb(157 111 255 / var(--tw-border-opacity));
+}
+
+.bg-purple-dark-mode {
+  transition-property: all;
+  transition-duration: 500ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.dark .bg-purple-dark-mode {
+  --tw-bg-opacity: 1;
+  background-color: rgb(157 111 255 / var(--tw-bg-opacity));
+}
+
+.dark .dark\:text-text-light {
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
 }
 
 @media (min-width: 640px) {
@@ -764,6 +852,10 @@ details summary{
 
   .md\:ml-auto {
     margin-left: auto;
+  }
+
+  .md\:mr-4 {
+    margin-right: 1rem;
   }
 
   .md\:block {
@@ -829,6 +921,16 @@ details summary{
 
   .md\:text-left {
     text-align: left;
+  }
+
+  .md\:text-text-dark {
+    --tw-text-opacity: 1;
+    color: rgb(39 40 45 / var(--tw-text-opacity));
+  }
+
+  .dark .md\:dark\:text-text-light {
+    --tw-text-opacity: 1;
+    color: rgb(255 255 255 / var(--tw-text-opacity));
   }
 }
 
