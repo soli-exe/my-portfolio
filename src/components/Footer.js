@@ -1,14 +1,7 @@
 import React from 'react';
-import styled from 'styled-components';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGithub } from '@fortawesome/free-brands-svg-icons';
 import { faInstagram } from '@fortawesome/free-brands-svg-icons';
-import githubIcon from '../assets/icons/github.svg';
-import instagramIcon from '../assets/icons/instagram.svg';
-
-const Img = styled.img`
-    width: 2rem;
-`;
 
 
 const Footer = () => {
