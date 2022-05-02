@@ -19,7 +19,7 @@ details summary{
 
 .contact-input,
 .contact-textarea{
-    @apply w-full py-3 pl-6 rounded-full border border-bg-dark bg-bg-light focus:outline-purple-dark;
+    @apply w-full py-3 pl-6 rounded-full border border-bg-dark bg-bg-light focus:outline-purple-dark dark:bg-box-dark dark:border-bg-light focus:dark:outline-purple-light dark:border-2 dark:text-text-light;
 }
 
 .contact-textarea{
@@ -27,4 +27,29 @@ details summary{
     overflow: auto;
     height: 8rem;
     border-radius: 2rem !important;
+}
+
+.bg-dark-theme {
+    @apply dark:bg-bg-dark transition-all ease-in-out duration-500;
+    
+}
+
+.text-dark-theme {
+    @apply dark:text-text-light transition-all ease-in-out duration-500;
+}
+
+.box-dark-mode {
+    @apply dark:bg-box-dark transition-all ease-in-out duration-500;
+}
+
+.text-purple-dark-mode {
+    @apply dark:text-purple-light transition-all ease-in-out duration-500;
+}
+
+.border-purple-dark-mode {
+    @apply dark:border-purple-light transition-all ease-in-out duration-500;
+}
+
+.bg-purple-dark-mode {
+    @apply dark:bg-purple-light transition-all ease-in-out duration-500;
 }
