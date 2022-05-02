@@ -23,7 +23,7 @@ const Intro = () => {
             <div className='flex items-center flex-col md:flex-row-reverse md:justify-between space-y-6'>
                 <section className='w-auto'>
                     <PictureFrame>
-                        <img src={myImage} className='w-64' />
+                        <img src={myImage} className='w-64' alt='personal' />
                     </PictureFrame>
                 </section>
                 <section className='text-text-dark w-full md:w-1/2 space-y-4 text-justify text-dark-theme'>
