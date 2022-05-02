@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import { Link } from 'react-router-dom';
+import { NavLink, Outlet } from 'react-router-dom';
 
 const Nav = styled.nav`
     display: block;
@@ -31,21 +31,24 @@ const Div = styled.div`
 
 const Navbar = (props) => {
     return (
-        <Nav isShown={props.isShown} className='absolute top-11 left-6.5 md:static md:ml-auto md:mr-4 z-10'>
-            <Div>
-                <ul className='text-text-dark text-sm flex flex-col md:flex-row font-bold gap-x-4 md:dark:text-text-light'>
-                    <Link to='/'>
-                        <li className='px-3 py-2 cursor-pointer border-b border-border-default md:border-0'>Home</li>
-                    </Link>
-                    <Link to='/skills' >
-                        <li className='px-3 py-2 cursor-pointer border-b border-border-default md:border-0'>Skills</li>
-                    </Link>
-                    <Link to='/projects'>
-                        <li className='px-3 py-2 cursor-pointer'>Projects</li>
-                    </Link>
-                </ul>
-            </Div>
-        </Nav>
+        <>
+            <Nav isShown={props.isShown} className='absolute top-11 left-6.5 md:static md:ml-auto md:mr-4 z-10'>
+                <Div>
+                    <ul className='text-text-dark text-sm flex flex-col md:flex-row font-bold gap-x-4 md:dark:text-text-light'>
+                        <NavLink to='/' className={({ isActive }) => { return isActive && 'text-purple-dark dark:md:text-purple-light' }}>
+                            <li className='px-3 py-2 cursor-pointer border-b border-border-default md:border-0'>Home</li>
+                        </NavLink>
+                        <NavLink to='/skills' className={({ isActive }) => { return isActive && 'text-purple-dark dark:md:text-purple-light' }}>
+                            <li className='px-3 py-2 cursor-pointer border-b border-border-default md:border-0'>Skills</li>
+                        </NavLink>
+                        <NavLink to='/projects' className={({ isActive }) => { return isActive && 'text-purple-dark dark:md:text-purple-light' }}>
+                            <li className='px-3 py-2 cursor-pointer'>Projects</li>
+                        </NavLink>
+                    </ul>
+                </Div>
+            </Nav>
+            <Outlet />
+        </>
     );
 };
 
