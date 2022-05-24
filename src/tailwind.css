@@ -433,6 +433,12 @@ Ensure the default browser behavior of the `hidden` attribute.
 .left-6 {
   left: 1.5rem;
 }
+.top-0 {
+  top: 0px;
+}
+.left-0 {
+  left: 0px;
+}
 .z-10 {
   z-index: 10;
 }
@@ -563,8 +569,14 @@ Ensure the default browser behavior of the `hidden` attribute.
   margin-top: calc(1.5rem * calc(1 - var(--tw-space-y-reverse)));
   margin-bottom: calc(1.5rem * var(--tw-space-y-reverse));
 }
+.overflow-hidden {
+  overflow: hidden;
+}
 .rounded-3xl {
   border-radius: 1.5rem;
+}
+.rounded-xl {
+  border-radius: 0.75rem;
 }
 .border {
   border-width: 1px;
@@ -687,6 +699,9 @@ Ensure the default browser behavior of the `hidden` attribute.
 .text-text-light {
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+.outline {
+  outline-style: solid;
 }
 .drop-shadow-custom {
   --tw-drop-shadow: drop-shadow(0 0 15px rgba(52, 52, 52, 0.1));
@@ -940,11 +955,6 @@ details summary{
   .md\:text-text-dark {
     --tw-text-opacity: 1;
     color: rgb(39 40 45 / var(--tw-text-opacity));
-  }
-
-  .md\:text-purple-light {
-    --tw-text-opacity: 1;
-    color: rgb(157 111 255 / var(--tw-text-opacity));
   }
 
   .dark .md\:dark\:text-text-light {
