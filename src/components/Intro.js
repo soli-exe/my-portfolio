@@ -9,8 +9,9 @@ const PictureFrame = styled.picture`
         position: absolute;
         top: 2.5rem;
         left: 2.5rem;
-        border: 3px solid #9633BC;
-        border-radius: 0 6px 0 6px;
+        border-bottom: 3px solid #9633BC;
+        border-right: 3px solid #9633BC;
+        border-radius: 0 15px 0 15px;
         width: 14rem;
         height: 14rem;
     }
