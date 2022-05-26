@@ -1,9 +1,12 @@
 import React from 'react';
-import styled from 'styled-components';
 import { v4 } from 'uuid';
+
+// Styles
+import styled from 'styled-components';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGithub } from '@fortawesome/free-brands-svg-icons';
 import { faArrowUpRightFromSquare } from '@fortawesome/free-solid-svg-icons';
+
 
 const Card = styled.div`
     width:  max(100%, 18rem);
