@@ -1,12 +1,18 @@
 import React from 'react';
 import { Route, Routes } from 'react-router-dom';
+
+// Styles
 import '../src/tailwind.css';
-import { ThemeProvider } from './components/ThemeContext';
-import ThemeToggle from './components/ThemeToggle';
+
+// Components
 import Header from './components/Header';
 import Home from './components/Home';
 import Skills from './components/Skills';
 import Projects from './components/Projects';
+
+// Contexts
+import { ThemeProvider } from './context/ThemeContext';
+import ThemeToggle from './context/ThemeToggle';
 
 const App = () => {
   return (
