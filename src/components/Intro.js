@@ -27,7 +27,7 @@ const Intro = () => {
                         <img src={myImage} className='w-64' alt='personal' />
                     </PictureFrame>
                 </section>
-                <section className='text-text-dark w-full md:w-1/2 space-y-4 text-justify text-dark-theme'>
+                <section className='text-text-dark w-full md:w-1/2 space-y-4 text-left text-dark-theme'>
                     <p className='font-semibold text-lg'>
                         Hi there,
                     </p>
