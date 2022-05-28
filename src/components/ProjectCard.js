@@ -32,7 +32,7 @@ const Span = styled.span`
 const ProjectCard = (props) => {
     const { title, description, labels, icon, link, githubRepoLink } = props;
     return (
-        <Card className='px-5 py-6 bg-box-light drop-shadow-lg sm:rounded-lg box-dark-mode'>
+        <Card className='flex flex-col px-5 py-6 bg-box-light drop-shadow-lg sm:rounded-lg box-dark-mode'>
             <header className='flex justify-between items-center w-full'>
                 <Div>
                     <img src={icon} className='w-10' alt='personal' />
@@ -54,7 +54,7 @@ const ProjectCard = (props) => {
                     {description}
                 </p>
             </section>
-            <footer className='flex w-full gap-2 flex-wrap'>
+            <footer className='flex w-full gap-2 flex-wrap mt-auto'>
                 {labels.map(lbl => {
                     return <Span className='bg-purple-light text-text-dark align-middle text-dark-theme' key={v4()}>{lbl}</Span>
                 })}
