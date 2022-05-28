@@ -457,6 +457,9 @@ Ensure the default browser behavior of the `hidden` attribute.
 .mt-4 {
   margin-top: 1rem;
 }
+.mt-auto {
+  margin-top: auto;
+}
 .block {
   display: block;
 }
@@ -471,12 +474,6 @@ Ensure the default browser behavior of the `hidden` attribute.
 }
 .h-max {
   height: max-content;
-}
-.h-screen {
-  height: 100vh;
-}
-.h-full {
-  height: 100%;
 }
 .w-full {
   width: 100%;
@@ -608,10 +605,6 @@ Ensure the default browser behavior of the `hidden` attribute.
 .bg-purple-light {
   --tw-bg-opacity: 1;
   background-color: rgb(157 111 255 / var(--tw-bg-opacity));
-}
-.bg-text-light {
-  --tw-bg-opacity: 1;
-  background-color: rgb(255 255 255 / var(--tw-bg-opacity));
 }
 .p-6 {
   padding: 1.5rem;
