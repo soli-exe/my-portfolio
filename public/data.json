@@ -55,6 +55,15 @@
             "icon": "./techLogos/react.svg",
             "link": "https://soliexe-crypto-react.netlify.app/",
             "githubRepo": "https://github.com/soli-exe/crypto-react"
+        },
+        {
+            "id": 3,
+            "title": "Note app",
+            "description": "A simple note or memo application, working with react animations",
+            "labels": ["react", "styled components", "animations"],
+            "icon": "./techLogos/react.svg",
+            "link": "https://ease-notes.netlify.app/",
+            "githubRepo": "https://github.com/soli-exe/note-app.git"
         }
     ]
 }
